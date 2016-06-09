@@ -244,7 +244,7 @@ int libarg_settle(libarg_ctx *ctx, unsigned char pedantic, int argc, char **argv
 			}
 		}
 
-		if (err) {
+		if (pedantic && err) {
 			printf("am I missed something? %s\n", argv[i]);
 			if (((struct libarg_ctx_t *)ctx)->usage)
 				((struct libarg_ctx_t *)ctx)->usage(argv[0]);
